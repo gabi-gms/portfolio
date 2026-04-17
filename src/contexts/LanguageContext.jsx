@@ -115,10 +115,8 @@ const translations = {
     },
     // Contact
     contact: {
-      title: 'Contact',
-      subtitle: "Let's build something amazing together",
-      description: 'I\'m always interested in hearing about new projects and opportunities.',
-      email: 'hello@gabriellagomes.com',
+      eyebrow: 'CONTACT',
+      title: 'Let’s connect. Feel free to reach out.',
       social: {
         github: 'GitHub',
         linkedin: 'LinkedIn',
@@ -247,10 +245,8 @@ const translations = {
     },
     // Contact
     contact: {
-      title: 'Contato',
-      subtitle: 'Vamos construir algo incrível juntos',
-      description: 'Estou sempre interessada em ouvir sobre novos projetos e oportunidades.',
-      email: 'ola@gabriellagomes.com',
+      eyebrow: 'CONTATO',
+      title: 'Vamos nos conectar! Fique à vontade para entrar em contato.',
       social: {
         github: 'GitHub',
         linkedin: 'LinkedIn',

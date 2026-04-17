@@ -20,18 +20,18 @@ function AppContent() {
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[#050611]" />
 
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_18%_12%,rgba(99,102,241,0.22),transparent_58%),radial-gradient(900px_circle_at_72%_18%,rgba(56,189,248,0.16),transparent_56%),radial-gradient(1100px_circle_at_50%_92%,rgba(168,85,247,0.14),transparent_62%),radial-gradient(700px_circle_at_50%_50%,rgba(255,255,255,0.05),transparent_62%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_18%_12%,rgba(99,102,241,0.03),transparent_58%),radial-gradient(900px_circle_at_72%_18%,rgba(56,189,248,0.02),transparent_56%),radial-gradient(1100px_circle_at_50%_92%,rgba(168,85,247,0.02),transparent_62%),radial-gradient(700px_circle_at_50%_50%,rgba(255,255,255,0.01),transparent_62%)]" />
 
         <div className="absolute inset-0 opacity-70 [mask-image:radial-gradient(circle_at_center,black_55%,transparent_80%)]">
-          <div className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-indigo-500/10 blur-3xl" />
-          <div className="absolute -right-52 top-10 h-[640px] w-[640px] rounded-full bg-sky-400/10 blur-3xl" />
-          <div className="absolute bottom-[-260px] left-1/2 h-[720px] w-[720px] -translate-x-1/2 rounded-full bg-violet-500/10 blur-3xl" />
+          <div className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-indigo-500/3 blur-3xl" />
+          <div className="absolute -right-52 top-10 h-[640px] w-[640px] rounded-full bg-sky-400/3 blur-3xl" />
+          <div className="absolute bottom-[-260px] left-1/2 h-[720px] w-[720px] -translate-x-1/2 rounded-full bg-violet-500/3 blur-3xl" />
         </div>
 
         <Starfield count={120} />
         <FloatingAccents count={10} />
 
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_50%,transparent_60%,rgba(0,0,0,0.55)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_50%_50%,transparent_60%,rgba(0,0,0,0.75)_100%)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/45" />
       </div>
 

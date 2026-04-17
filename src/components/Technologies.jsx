@@ -185,10 +185,10 @@ function TechCard({ item }) {
 
 export function Technologies() {
   const { t } = useLanguage()
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState('All')
 
   const visible = useMemo(() => {
-    if (activeCategory === 'all') return tech
+    if (activeCategory === 'All') return tech
     return tech.filter((t) => t.category === activeCategory)
   }, [activeCategory])
   return (

@@ -1,6 +1,5 @@
 import { Starfield } from './components/Starfield.jsx'
 import { FloatingAccents } from './components/FloatingAccents.jsx'
-import { ConstellationBackground } from './components/ConstellationBackground.jsx'
 import { Hero } from './components/Hero.jsx'
 import { About } from './components/About.jsx'
 import { Technologies } from './components/Technologies.jsx'
@@ -16,7 +15,6 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-[#060710] dark:bg-[#060710] light:bg-gray-50 text-slate-100 dark:text-slate-100 light:text-slate-900 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
-      <ConstellationBackground />
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[#050611]" />
 

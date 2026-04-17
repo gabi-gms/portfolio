@@ -14,10 +14,8 @@ const translations = {
     hero: {
       tagline: 'COSMIC · FUTURISTIC · MINIMAL',
       heading: {
-        line1: `Hello, I'm`,
-        line2: 'Gabi',
-        line3: 'with quiet',
-        line4: 'precision.'
+        line1: 'Hello,',
+        line2: `I'm Gabriella`,
       },
       description: 'I build premium, minimal web experiences\u2014clean typography, subtle depth, and motion that feels natural.',
       viewProjects: 'View projects',

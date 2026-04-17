@@ -2,6 +2,7 @@ import { AnimatePresence, motion as Motion } from 'framer-motion'
 import { Section } from './Section.jsx'
 import { Cpu } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import { useLanguage } from '../contexts/LanguageContext.jsx'
 
 function mulberry32(seed) {
   return function () {
@@ -179,13 +180,13 @@ function TechCard({ item }) {
 }
 
 export function Technologies() {
-  const [active, setActive] = useState('All')
+  const { t } = useLanguage()
+  const [activeCategory, setActiveCategory] = useState('all')
 
   const visible = useMemo(() => {
-    if (active === 'All') return tech
-    return tech.filter((t) => t.category === active)
-  }, [active])
-
+    if (activeCategory === 'all') return tech
+    return tech.filter((t) => t.category === activeCategory)
+  }, [activeCategory])
   return (
     <Section
       id="technologies"
@@ -201,8 +202,8 @@ export function Technologies() {
             {filters.map((f) => (
               <FilterButton
                 key={f}
-                active={active === f}
-                onClick={() => setActive(f)}
+                active={activeCategory === f}
+                onClick={() => setActiveCategory(f)}
               >
                 {f.toUpperCase()}
               </FilterButton>
@@ -211,7 +212,7 @@ export function Technologies() {
 
           <Motion.div
             layout
-        className="mt-7 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-7 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             <AnimatePresence mode="popLayout">
               {visible.map((item) => (

@@ -8,11 +8,14 @@ import { Projects } from './components/Projects.jsx'
 import { Experience } from './components/Experience.jsx'
 import { Contact } from './components/Contact.jsx'
 import { ThemeProvider } from './contexts/ThemeContext.jsx'
+import { LanguageProvider } from './contexts/LanguageContext.jsx'
+import { useLanguage } from './contexts/LanguageContext.jsx'
 
-function App() {
+function AppContent() {
+  const { t } = useLanguage()
+
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-[#060710] dark:bg-[#060710] light:bg-gray-50 text-slate-100 dark:text-slate-100 light:text-slate-900 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
+    <div className="min-h-screen bg-[#060710] dark:bg-[#060710] light:bg-gray-50 text-slate-100 dark:text-slate-100 light:text-slate-900 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
       <ConstellationBackground />
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[#050611]" />
@@ -55,7 +58,7 @@ function App() {
                   <span className="font-medium text-slate-200">Gabriella Gomes</span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Crafting premium digital experiences
+                  {t('footer.tagline')}
                 </p>
               </div>
 
@@ -100,14 +103,23 @@ function App() {
             {/* Bottom Copyright */}
             <div className="mt-8 pt-8 border-t border-white/5">
               <div className="flex flex-col items-center justify-between gap-2 text-xs text-slate-500 sm:flex-row">
-                <span>© {new Date().getFullYear()} Gabriella Gomes</span>
-                <span>Built with React, Tailwind, Framer Motion</span>
+                <span>{t('footer.copyright', { year: new Date().getFullYear() })}</span>
+                <span>{t('footer.builtWith')}</span>
               </div>
             </div>
           </div>
         </footer>
       </div>
-      </div>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
     </ThemeProvider>
   )
 }

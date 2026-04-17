@@ -1,60 +1,44 @@
 import { Section } from './Section.jsx'
 import { User, Code, Zap, Layers, Gauge } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext.jsx'
 
-const concepts = [
-  {
-    icon: Code,
-    title: 'Clarity',
-    subtitle: 'clean.code',
-    points: [
-      'Semantic HTML structure',
-      'Component-based architecture', 
-      'TypeScript for type safety',
-      'Readable, maintainable code'
-    ]
-  },
-  {
-    icon: Zap,
-    title: 'Motion',
-    subtitle: 'smooth.interactions',
-    points: [
-      '60fps animations',
-      'Physics-based transitions',
-      'Micro-interactions',
-      'Performance optimized'
-    ]
-  },
-  {
-    icon: Layers,
-    title: 'Systems',
-    subtitle: 'scalable.design',
-    points: [
-      'Design tokens',
-      'Reusable components',
-      'Consistent patterns',
-      'Documentation first'
-    ]
-  },
-  {
-    icon: Gauge,
-    title: 'Performance',
-    subtitle: 'optimized.experience',
-    points: [
-      'Core Web Vitals',
-      'Lazy loading',
-      'Bundle optimization',
-      'Accessibility standards'
-    ]
-  }
-]
 
 export function About() {
+  const { t } = useLanguage()
+
+  const concepts = [
+    {
+      icon: Code,
+      title: t('about.concepts.clarity.title'),
+      subtitle: t('about.concepts.clarity.subtitle'),
+      points: t('about.concepts.clarity.points')
+    },
+    {
+      icon: Zap,
+      title: t('about.concepts.motion.title'),
+      subtitle: t('about.concepts.motion.subtitle'),
+      points: t('about.concepts.motion.points')
+    },
+    {
+      icon: Layers,
+      title: t('about.concepts.systems.title'),
+      subtitle: t('about.concepts.systems.subtitle'),
+      points: t('about.concepts.systems.points')
+    },
+    {
+      icon: Gauge,
+      title: t('about.concepts.performance.title'),
+      subtitle: t('about.concepts.performance.subtitle'),
+      points: t('about.concepts.performance.points')
+    }
+  ]
+
   return (
     <Section
       id="about"
-      eyebrow="ABOUT"
-      title="<developer mindset />"
+      eyebrow={t('about.eyebrow')}
+      title={t('about.title')}
       icon={User}
     >
       <div className="space-y-8">
@@ -67,7 +51,7 @@ export function About() {
         >
           <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
             <span className="h-2 w-2 rounded-full bg-green-400"></span>
-            <span>system.status</span>
+            <span>{t('about.approach.code.status')}</span>
             <span className="text-green-400">active</span>
           </div>
           <div className="mt-4 font-mono text-sm text-slate-300">
@@ -77,9 +61,9 @@ export function About() {
             <span className="text-slate-200"> {`{`}</span>
           </div>
           <div className="ml-6 mt-2 space-y-1 font-mono text-sm text-slate-300">
-            <div><span className="text-indigo-400">focus</span>: <span className="text-slate-200">"premium interfaces"</span>,</div>
-            <div><span className="text-indigo-400">approach</span>: <span className="text-slate-200">"minimal + functional"</span>,</div>
-            <div><span className="text-indigo-400">status</span>: <span className="text-green-400">"open to opportunities"</span></div>
+            <div><span className="text-indigo-400">focus</span>: <span className="text-slate-200">{t('about.approach.code.focus')}</span>,</div>
+            <div><span className="text-indigo-400">style</span>: <span className="text-slate-200">{t('about.approach.code.style')}</span>,</div>
+            <div><span className="text-indigo-400">approach</span>: <span className="text-slate-200">{t('about.approach.code.approach')}</span></div>
           </div>
           <div className="mt-2 font-mono text-sm text-slate-200">{`}`}</div>
         </motion.div>

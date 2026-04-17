@@ -79,7 +79,7 @@ function TechIcon({ name }) {
   }
 }
 
-const filters = ['All', 'Frontend', 'Backend', 'Tools']
+const filters = ['All', 'Frontend', 'Backend', 'Tools', 'Database']
 
 const tech = [
   // Frontend
@@ -101,6 +101,10 @@ const tech = [
   { name: 'Vite', category: 'Tools', level: 'Advanced', value: 78 },
   { name: 'Figma', category: 'Tools', level: 'Intermediate', value: 64 },
   { name: 'VS Code', category: 'Tools', level: 'Advanced', value: 76 },
+  
+  // Database
+  { name: 'MySQL', category: 'Database', level: 'Intermediate', value: 65 },
+  { name: 'PostgreSQL', category: 'Database', level: 'Intermediate', value: 60 },
 ]
 
 function FilterButton({ active, children, onClick }) {
@@ -190,8 +194,8 @@ export function Technologies() {
   return (
     <Section
       id="technologies"
-      eyebrow="TECHNOLOGIES"
-      title="A focused stack for modern interfaces."
+      eyebrow={t('technologies.eyebrow')}
+      title={t('technologies.title')}
       icon={Cpu}
     >
       <div className="relative">

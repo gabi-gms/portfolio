@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section } from './Section.jsx'
 import { Timer } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext.jsx'
 
 const items = [
   {
@@ -59,11 +60,13 @@ function TimelineItem({ item }) {
 }
 
 export function Experience() {
+  const { t } = useLanguage() 
+
   return (
     <Section
       id="experience"
-      eyebrow="EXPERIENCE"
-      title="Timeline of work and focus."
+       eyebrow={t('experience.eyebrow')}
+      title={t('experience.title')}
       icon={Timer}
     >
       <div className="grid gap-8 lg:grid-cols-12">

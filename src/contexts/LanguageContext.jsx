@@ -98,19 +98,19 @@ const translations = {
     },
     // Experience
     experience: {
-      title: 'Experience',
-      current: 'CURRENTLY',
-      available: 'Available for freelance projects',
-      contactMe: 'Contact me'
+      title: 'My journey through learning, building, and evolving',
+      eyebrow: 'EXPERIENCE'
+
     },
     // Technologies
     technologies: {
-      title: 'Technologies',
-      subtitle: 'Tools I work with',
+      title: 'Tools and technologies behind my work',
+      eyebrow: 'TECH STACK',
       categories: {
         frontend: 'Frontend',
         backend: 'Backend',
-        tools: 'Tools & Design'
+        tools: 'Tools',
+        database: 'Database'
       }
     },
     // Contact
@@ -231,19 +231,18 @@ const translations = {
     },
     // Experience
     experience: {
-      title: 'Experiência',
-      current: 'ATUALMENTE',
-      available: 'Disponível para projetos freelance',
-      contactMe: 'Entre em contato'
+      title: 'Minha jornada entre aprendizado, construção e evolução',
+      eyebrow: 'EXPERIÊNCIA'
     },
     // Technologies
     technologies: {
-      title: 'Tecnologias',
-      subtitle: 'Ferramentas com as quais trabalho',
+      title: 'Ferramentas e tecnologias por trás do meu trabalho',
+      eyebrow: 'TECNOLOGIAS',
       categories: {
-        frontend: 'Frontend',
-        backend: 'Backend',
-        tools: 'Ferramentas & Design'
+        frontend: 'Front-end',
+        backend: 'Back-end',
+        tools: 'Ferramentas',
+        database: 'Banco de Dados'
       }
     },
     // Contact

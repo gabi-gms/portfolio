@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Section } from './Section.jsx'
 import { Mail, Send, GitBranch, Link } from 'lucide-react'
-import { useLanguage } from '../contexts/LanguageContext.jsx'
 
 const links = [
   {
@@ -28,13 +27,12 @@ const links = [
 ]
 
 export function Contact() {
-  const { t } = useLanguage()
 
   return (
     <Section
       id="contact"
-      eyebrow={t('contact.eyebrow')}
-      title={t('contact.title')}
+      eyebrow="CONTACT"
+      title="Let's connect. Feel free to reach out."
       icon={Send}
     >
 
@@ -73,7 +71,7 @@ export function Contact() {
                 {/* Contact Info */}
                 <div className="relative text-center">
                   <div className="text-xs font-semibold tracking-tight text-slate-100 transition-all duration-400 group-hover:text-slate-50">
-                    {t(`contact.links.${label.toLowerCase()}.label`)}
+                    {label}
                   </div>
                   <div className="mt-1 truncate text-[11px] text-slate-400 transition-all duration-400 group-hover:text-slate-300">
                     {value}
@@ -82,7 +80,7 @@ export function Contact() {
 
                 {/* Call-to-action */}
                 <div className="relative text-[11px] font-medium tracking-[0.22em] text-slate-400 transition-all duration-400 group-hover:text-slate-300">
-                  {t('contact.open')}
+                  Get in touch
                   <span className="ml-2 inline-block transition-all duration-400 group-hover:translate-x-1">
                     →
                   </span>

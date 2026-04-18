@@ -1,21 +1,17 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect, useMemo } from 'react'
-import { useLanguage } from '../contexts/LanguageContext.jsx'
+import { useState, useEffect } from 'react'
 import profileImage from '../assets/profile-cosmic.png'
-
 
 export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const { language, toggleLanguage, t } = useLanguage()
 
-  // Cache navigation items to avoid redundant translation calls
-  const nav = useMemo(() => [
-    { label: t('nav.about'), href: '#about' },
-    { label: t('nav.projects'), href: '#projects' },
-    { label: t('nav.experience'), href: '#experience' },
-    { label: t('nav.stacks'), href: '#technologies' },
-    { label: t('nav.contact'), href: '#contact' },
-  ], [language, t])
+  const nav = [
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Stacks', href: '#technologies' },
+    { label: 'Contact', href: '#contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,17 +49,6 @@ export function Hero() {
                   {item.label}
                 </a>
               ))}
-              
-              {/* Language Toggle Button */}
-              <motion.button
-                onClick={toggleLanguage}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="rounded-full px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-slate-100"
-                aria-label="Toggle language"
-              >
-                {language === 'en' ? 'PT' : 'EN'}
-              </motion.button>
             </nav>
           </div>
         </div>
@@ -89,7 +74,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xs font-medium tracking-[0.26em] text-slate-400"
             >
-              {t('hero.tagline')}
+              COSMIC · FUTURISTIC · MINIMAL
             </motion.p>
 
             <motion.h1 
@@ -98,9 +83,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-6xl leading-[1.05]"
             >
-              <span className="block">{t('hero.heading.line1')}</span>
+              <span className="block">Hello</span>
               <span className="block bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                {t('hero.heading.line2')}
+                I'm Gabriella
               </span>
             </motion.h1>
 
@@ -110,7 +95,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-base leading-relaxed text-slate-300 lg:text-lg"
             >
-              {t('hero.description')}
+              Full-Stack Developer & UI/UX Designer
             </motion.p>
 
             <motion.div 
@@ -127,7 +112,7 @@ export function Hero() {
                 className="group inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500/80 to-sky-400/80 px-8 py-4 text-sm font-medium text-slate-950 shadow-[0_6px_24px_rgba(99,102,241,0.12)] ring-1 ring-white/10 hover:from-indigo-500/90 hover:to-sky-400/90 lg:px-10 lg:py-4.5"
               >
                 <span className="relative">
-                  {t('hero.viewProjects')}
+                  View Projects
                   <span className="pointer-events-none absolute inset-x-0 -bottom-2 mx-auto h-px w-10 bg-white/40 opacity-0 blur-[1px] transition group-hover:opacity-70" />
                 </span>
               </motion.a>
@@ -139,7 +124,7 @@ export function Hero() {
                 transition={{ duration: 0.25, ease: 'easeOut' }}
                 className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-sm font-medium text-slate-100 backdrop-blur-md transition hover:bg-white/[0.07] lg:px-10 lg:py-4.5"
               >
-                {t('hero.getInTouch')}
+                Get in Touch
               </motion.a>
             </motion.div>
           </div>

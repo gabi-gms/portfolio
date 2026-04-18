@@ -5,11 +5,8 @@ import { Technologies } from './components/Technologies.jsx'
 import { Projects } from './components/Projects.jsx'
 import { Experience } from './components/Experience.jsx'
 import { Contact } from './components/Contact.jsx'
-import { LanguageProvider } from './contexts/LanguageContext.jsx'
-import { useLanguage } from './contexts/LanguageContext.jsx'
 
 function AppContent() {
-  const { t } = useLanguage()
 
   return (
     <div className="min-h-screen bg-[#060710] text-slate-100 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
@@ -54,7 +51,7 @@ function AppContent() {
                   <span className="font-medium text-slate-200">Gabriella Gomes</span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  {t('footer.tagline')}
+                  Crafting premium digital experiences
                 </p>
               </div>
 
@@ -99,8 +96,8 @@ function AppContent() {
             {/* Bottom Copyright */}
             <div className="mt-8 pt-8 border-t border-white/5">
               <div className="flex flex-col items-center justify-between gap-2 text-xs text-slate-500 sm:flex-row">
-                <span>{t('footer.copyright', { year: new Date().getFullYear() })}</span>
-                <span>{t('footer.builtWith')}</span>
+                <span>© {new Date().getFullYear()} Gabriella Gomes. All rights reserved.</span>
+                <span>Built with React & Vite</span>
               </div>
             </div>
           </div>
@@ -111,11 +108,7 @@ function AppContent() {
 }
 
 function App() {
-  return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
-  )
+  return <AppContent />
 }
 
 export default App

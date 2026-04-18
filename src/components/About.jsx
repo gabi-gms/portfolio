@@ -1,19 +1,16 @@
 import { Section } from './Section.jsx'
 import { User, Code, Zap, Layers, Gauge } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useLanguage } from '../contexts/LanguageContext.jsx'
 import { useMemo } from 'react'
 import profileImage from '../assets/profile-cosmic.png'
 
 
 export function About() {
-  const { t } = useLanguage()
-
   return (
     <Section
       id="about"
-      eyebrow={t('about.eyebrow')}
-      title={t('about.title')}
+      eyebrow="About"
+      title="<developer mindset />"
       icon={User}
     >
       <div className="grid grid-cols-3 gap-8">
@@ -39,7 +36,7 @@ export function About() {
               <div className="h-3 w-3 rounded-full bg-yellow-500/80"></div>
               <div className="h-3 w-3 rounded-full bg-green-500/80"></div>
             </div>
-            <div className="text-xs font-mono text-slate-500">{t('about.approach.filename')}</div>
+            <div className="text-xs font-mono text-slate-500">profile.ts</div>
           </div>
           
           {/* Code content */}
@@ -54,25 +51,25 @@ export function About() {
               <div>
                 <span className="text-indigo-400">name</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> {t('about.approach.profile.name')}</span>
+                <span className="text-slate-200"> "Gabriella Gomes"</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">role</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> {t('about.approach.profile.role')}</span>
+                <span className="text-slate-200"> "Full Stack Developer"</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">focus</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> {t('about.approach.profile.focus')}</span>
+                <span className="text-slate-200"> "Premium Web Experiences"</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">approach</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> {t('about.approach.profile.approach')}</span>
+                <span className="text-slate-200"> "Minimal + Functional"</span>
               </div>
             </div>
             <div className="text-slate-200">{'}'}</div>

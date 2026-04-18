@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Section } from './Section.jsx'
 import { Layers, Sparkles } from 'lucide-react'
-import { useLanguage } from '../contexts/LanguageContext.jsx'
 
 function ProjectCard({ project }) {
   return (
@@ -59,44 +58,42 @@ function ProjectCard({ project }) {
 }
 
 export function Projects() {
-  const { t } = useLanguage()
-
   const projects = [
     {
-      title: t('projects.nebulanotes.title'),
-      description: t('projects.nebulanotes.description'),
-      tags: t('projects.nebulanotes.tags'),
+      title: 'Nebula Notes',
+      description: 'A clean notes app with fast search, markdown support, and offline-first storage.',
+      tags: ['React', 'Local storage', 'UI'],
       href: '#',
-      featured: t('projects.featured'),
+      featured: 'Featured',
     },
     {
-      title: t('projects.orbitdashboard.title'),
-      description: t('projects.orbitdashboard.description'),
-      tags: t('projects.orbitdashboard.tags'),
+      title: 'Orbit Dashboard',
+      description: 'A minimal analytics dashboard with responsive charts and accessible components.',
+      tags: ['React', 'Tailwind', 'A11y'],
       href: '#',
-      featured: t('projects.featured'),
+      featured: 'Featured',
     },
     {
-      title: t('projects.stellarshop.title'),
-      description: t('projects.stellarshop.description'),
-      tags: t('projects.stellarshop.tags'),
+      title: 'Stellar Shop',
+      description: 'A storefront concept with polished product cards, filters, and smooth motion.',
+      tags: ['UI', 'Motion', 'Performance'],
       href: '#',
-      featured: t('projects.featured'),
+      featured: 'Featured',
     },
     {
-      title: t('projects.stellarshop.title'),
-      description: t('projects.stellarshop.description'),
-      tags: t('projects.stellarshop.tags'),
+      title: 'Stellar Shop',
+      description: 'A storefront concept with polished product cards, filters, and smooth motion.',
+      tags: ['UI', 'Motion', 'Performance'],
       href: '#',
-      featured: t('projects.featured'),
+      featured: 'Featured',
     },
   ]
 
   return (
     <Section
       id="projects"
-      eyebrow={t('projects.eyebrow')}
-      title={t('projects.title')}
+      eyebrow="PROJECTS"
+      title="Selected work blending design, logic, and interaction"
       icon={Layers}
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -2,7 +2,6 @@ import { AnimatePresence, motion as Motion } from 'framer-motion'
 import { Section } from './Section.jsx'
 import { Cpu } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { useLanguage } from '../contexts/LanguageContext.jsx'
 
 function mulberry32(seed) {
   return function () {
@@ -151,18 +150,18 @@ function TechCard({ item }) {
 }
 
 export function Technologies() {
-  const { t } = useLanguage()
   const [activeCategory, setActiveCategory] = useState('All')
 
   const visible = useMemo(() => {
     if (activeCategory === 'All') return tech
     return tech.filter((t) => t.category === activeCategory)
   }, [activeCategory])
+
   return (
     <Section
       id="technologies"
-      eyebrow={t('technologies.eyebrow')}
-      title={t('technologies.title')}
+      eyebrow="TECH STACK"
+      title="Tools and technologies behind my work"
       icon={Cpu}
     >
       <div className="relative">
@@ -176,7 +175,7 @@ export function Technologies() {
                 active={activeCategory === f}
                 onClick={() => setActiveCategory(f)}
               >
-                {f.toUpperCase()}
+                {f}
               </FilterButton>
             ))}
           </div>

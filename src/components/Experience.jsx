@@ -6,22 +6,25 @@ import { useLanguage } from '../contexts/LanguageContext.jsx'
 const items = [
   {
     role: 'Front-End Developer',
-    org: 'Freelance / Personal Projects',
+    company: 'Freelance / Personal Projects',
     period: '2024 — Present',
+    tags: ['React', 'Tailwind CSS', 'TypeScript'],
     description:
       'Designing and building modern UIs with React and Tailwind, focusing on clean layouts, accessibility, and subtle motion.',
   },
   {
     role: 'UI Engineer',
-    org: 'Product Prototype',
+    company: 'Product Prototype',
     period: '2023 — 2024',
+    tags: ['Component Libraries', 'UI/UX', 'Performance'],
     description:
       'Created component libraries and polished interactions, improving consistency and speeding up feature delivery.',
   },
   {
     role: 'Web Developer',
-    org: 'Learning & Labs',
+    company: 'Learning & Labs',
     period: '2022 — 2023',
+    tags: ['Responsive Design', 'Performance', 'Animation'],
     description:
       'Built responsive websites and experimented with performance, animations, and design systems.',
   },
@@ -47,7 +50,7 @@ function TimelineItem({ item }) {
           <div className="text-base font-semibold tracking-tight text-slate-50">
             {item.role}
           </div>
-          <div className="mt-1 text-sm text-slate-300">{item.org}</div>
+          <div className="mt-1 text-sm text-slate-500">{item.company}</div>
         </div>
         <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-[0.22em] text-slate-400">
           {item.period}
@@ -55,6 +58,20 @@ function TimelineItem({ item }) {
       </div>
 
       <p className="text-sm leading-relaxed text-slate-300">{item.description}</p>
+
+      {/* Stack tags */}
+      {item.tags && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {item.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-slate-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </motion.div>
   )
 }

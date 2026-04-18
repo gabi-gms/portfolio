@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "stacks": "Stacks",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "COSMIC · FUTURISTIC · MINIMAL",
+    "heading": {
+      "line1": "Hello,",
+      "line2": "I'm Gabriella"
+    },
+    "description": "I build premium, minimal web experiences—clean typography, subtle depth, and motion that feels natural.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch"
+  },
+  "about": {
+    "title": "<developer mindset />",
+    "eyebrow": "ABOUT",
+    "concepts": {
+      "clarity": {
+        "title": "Clarity",
+        "subtitle": "Design with purpose",
+        "points": [
+          "Clean, intuitive interfaces",
+          "Focused user experiences",
+          "Intentional visual hierarchy"
+        ]
+      },
+      "motion": {
+        "title": "Motion",
+        "subtitle": "Subtle animations",
+        "points": [
+          "Natural micro-interactions",
+          "Smooth transitions",
+          "Performance-optimized"
+        ]
+      },
+      "systems": {
+        "title": "Systems",
+        "subtitle": "Scalable architecture",
+        "points": [
+          "Component-driven development",
+          "Reusable design patterns",
+          "Maintainable code structure"
+        ]
+      },
+      "performance": {
+        "title": "Performance",
+        "subtitle": "Lightning fast",
+        "points": [
+          "Optimized loading strategies",
+          "Efficient rendering",
+          "Smooth user interactions"
+        ]
+      }
+    },
+    "approach": {
+      "title": "My Approach",
+      "code": {
+        "status": "system.status",
+        "focus": "focus: \"interfaces\"",
+        "style": "style: \"minimal + cosmic\"",
+        "approach": "approach: \"precision\""
+      }
+    }
+  },
+  "projects": {
+    "title": "Selected work blending design, logic, and interaction",
+    "eyebrow": "PROJECTS",
+    "featured": "Featured",
+    "nebulanotes": {
+      "title": "Nebula Notes",
+      "description": "A clean notes app with fast search, markdown support, and offline-first storage.",
+      "tags": ["React", "Local storage", "UI"]
+    },
+    "orbitdashboard": {
+      "title": "Orbit Dashboard",
+      "description": "A minimal analytics dashboard with responsive charts and accessible components.",
+      "tags": ["React", "Tailwind", "A11y"]
+    },
+    "stellarshop": {
+      "title": "Stellar Shop",
+      "description": "A storefront concept with polished product cards, filters, and smooth motion.",
+      "tags": ["UI", "Motion", "Performance"]
+    }
+  },
+  "experience": {
+    "title": "My journey through learning, building, and evolving",
+    "eyebrow": "EXPERIENCE",
+    "sigpharma": {
+      "company": "SIGPHARMA",
+      "role": "Full Stack Developer",
+      "period": "2023 - 2024",
+      "description": "Developed and maintained web applications for the company.",
+      "tags": ["React", "Node.js", "MongoDB"]
+    }
+  },
+  "technologies": {
+    "title": "Tools and technologies behind my work",
+    "eyebrow": "TECH STACK",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "database": "Database"
+    }
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Let's connect. Feel free to reach out.",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "footer": {
+    "tagline": "Crafting premium digital experiences",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "copyright": "© {year} Gabriella Gomes",
+    "builtWith": "Built with React, Tailwind, Framer Motion"
+  }
+}

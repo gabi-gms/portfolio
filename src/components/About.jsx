@@ -2,13 +2,15 @@ import { Section } from './Section.jsx'
 import { User, Code, Zap, Layers, Gauge } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext.jsx'
+import { useMemo } from 'react'
 import profileImage from '../assets/profile-cosmic.png'
 
 
 export function About() {
   const { t } = useLanguage()
 
-  const concepts = [
+  // Cache concepts array to avoid redundant translation calls
+  const concepts = useMemo(() => [
     {
       icon: Code,
       title: t('about.concepts.clarity.title'),
@@ -33,7 +35,7 @@ export function About() {
       subtitle: t('about.concepts.performance.subtitle'),
       points: t('about.concepts.performance.points')
     }
-  ]
+  ], [t])
 
   return (
     <Section

@@ -54,30 +54,6 @@ function TechParticles({ count = 32 }) {
   )
 }
 
-function TechIcon({ name }) {
-  const cls = 'h-4 w-4 text-slate-200/90'
-
-  switch (name) {
-    case 'React':
-      return (
-        <svg viewBox="0 0 24 24" className={cls} aria-hidden="true">
-          <path
-            fill="currentColor"
-            d="M12 10.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Zm0-5.7c-1.9 0-3.7.2-5.2.6-1.8.5-3.1 1.2-3.7 2.1-.6.9-.5 2.1.1 3.5.4.9 1 1.9 1.8 2.8-.8.9-1.4 1.9-1.8 2.8-.6 1.4-.7 2.6-.1 3.5.6.9 1.9 1.6 3.7 2.1 1.5.4 3.3.6 5.2.6s3.7-.2 5.2-.6c1.8-.5 3.1-1.2 3.7-2.1.6-.9.5-2.1-.1-3.5-.4-.9-1-1.9-1.8-2.8.8-.9 1.4-1.9 1.8-2.8.6-1.4.7-2.6.1-3.5-.6-.9-1.9-1.6-3.7-2.1-1.5-.4-3.3-.6-5.2-.6Zm0 1.6c1.8 0 3.5.2 4.9.6 1.4.4 2.4.9 2.8 1.5.4.6.3 1.5-.2 2.6-.3.8-.9 1.6-1.6 2.4-1.1-1-2.4-1.9-3.7-2.6-1.3-.7-2.7-1.2-4.2-1.6 1.1-.2 2.3-.3 3.5-.3Zm-3.5.6c1.7.4 3.4 1 5 1.9 1.2.7 2.3 1.4 3.2 2.3-.9.9-2 1.6-3.2 2.3-1.6.9-3.3 1.5-5 1.9-.6-1.7-1-3.5-1-5.1s.4-3.4 1-5.1Zm-1.6.5c-.4 1.6-.6 3.3-.6 4.6s.2 3 .6 4.6c-1.3-.4-2.4-.9-3.4-1.4-.9-.5-1.7-1.1-2.4-1.7.7-.6 1.5-1.2 2.4-1.7 1-.6 2.1-1 3.4-1.4Zm10.2 0c1.3.4 2.4.9 3.4 1.4.9.5 1.7 1.1 2.4 1.7-.7.6-1.5 1.2-2.4 1.7-1 .6-2.1 1-3.4 1.4.4-1.6.6-3.3.6-4.6s-.2-3-.6-4.6ZM4.4 10.9c.3-.8.9-1.6 1.6-2.4.9.3 1.9.7 2.9 1-.5 1.1-.8 2.3-.9 3.5-.9-.6-1.7-1.3-2.3-2.1-.6-.8-1-1.5-1.3-2Zm15.2 0c-.3.8-.7 1.5-1.3 2.3-.6.7-1.4 1.4-2.3 2.1-.1-1.2-.4-2.4-.9-3.5 1-.3 2-.6 2.9-1 .7.8 1.3 1.6 1.6 2.4Zm-7.6 4.2c1.9 0 3.7-.2 5.2-.6 1.8-.5 3.1-1.2 3.7-2.1.1-.2.2-.4.3-.6.2.4.4.8.6 1.2.5 1.1.6 2 .2 2.6-.4.6-1.4 1.1-2.8 1.5-1.4.4-3.1.6-4.9.6-1.2 0-2.4-.1-3.5-.3 1.5-.4 2.9-.9 4.2-1.6 1.3-.7 2.6-1.6 3.7-2.6-.8.8-1.7 1.5-2.7 2.1-1.6.9-3.3 1.5-5 1.9-.4-1.6-.6-3.3-.6-4.6 0 .8.1 1.6.3 2.6.2 1 .5 2 .9 2.8 1.1.2 2.3.3 3.5.3Zm-6.7.5c-.7-.8-1.3-1.6-1.6-2.4-.2.5-.4.9-.6 1.3-.5 1.1-.6 2-.2 2.6.4.6 1.4 1.1 2.8 1.5 1.4.4 3.1.6 4.9.6 1.2 0 2.4-.1 3.5-.3-1.5-.4-2.9-.9-4.2-1.6-1.3-.7-2.6-1.6-3.7-2.6-.9-.9-1.6-1.7-2.1-2.6.3.8.7 1.5 1.2 2.2Z"
-          />
-        </svg>
-      )
-    default:
-      return (
-        <svg viewBox="0 0 24 24" className={cls} aria-hidden="true">
-          <path
-            fill="currentColor"
-            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 5a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 12 7Zm1.6 10H10.4v-1.6h1V12h-1v-1.6H13V15.4h.6V17Z"
-          />
-        </svg>
-      )
-  }
-}
 
 const filters = ['All', 'Frontend', 'Backend', 'Tools', 'Database']
 
@@ -138,15 +114,6 @@ function TechCard({ item }) {
 
       <div className="relative flex items-start justify-between gap-4">
         <div className="flex min-w-0 items-start gap-3">
-          <div className="relative grid h-6 w-7 place-items-center rounded-2xl border border-white/10 bg-white/4 shadow-[0_0_26px_rgba(99,102,241,0.10)] transition duration-700 group-hover:shadow-[0_0_40px_rgba(99,102,241,0.16)]">
-            <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100">
-              <div className="absolute inset-0 bg-[radial-gradient(70px_circle_at_35%_30%,rgba(99,102,241,0.18),transparent_60%),radial-gradient(70px_circle_at_65%_70%,rgba(56,189,248,0.12),transparent_60%)]" />
-            </div>
-            <span className="relative transition duration-700 group-hover:-translate-y-0.5">
-              <TechIcon name={item.name} />
-            </span>
-          </div>
-
           <div className="min-w-0 pt-0.5">
             <div className="truncate text-[14px] font-semibold tracking-tight text-slate-100">
               {item.name}

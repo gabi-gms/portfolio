@@ -1,12 +1,10 @@
-import { Starfield } from './components/Starfield.jsx'
-import { FloatingAccents } from './components/FloatingAccents.jsx'
+import { Starfield, FloatingAccents } from './components/BackgroundEffects.jsx'
 import { Hero } from './components/Hero.jsx'
 import { About } from './components/About.jsx'
 import { Technologies } from './components/Technologies.jsx'
 import { Projects } from './components/Projects.jsx'
 import { Experience } from './components/Experience.jsx'
 import { Contact } from './components/Contact.jsx'
-import { ThemeProvider } from './contexts/ThemeContext.jsx'
 import { LanguageProvider } from './contexts/LanguageContext.jsx'
 import { useLanguage } from './contexts/LanguageContext.jsx'
 
@@ -14,7 +12,7 @@ function AppContent() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-[#060710] dark:bg-[#060710] light:bg-gray-50 text-slate-100 dark:text-slate-100 light:text-slate-900 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
+    <div className="min-h-screen bg-[#060710] text-slate-100 selection:bg-indigo-500/30 selection:text-slate-50 transition-colors duration-300">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[#050611]" />
 
@@ -114,11 +112,9 @@ function AppContent() {
 
 function App() {
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <AppContent />
-      </LanguageProvider>
-    </ThemeProvider>
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   )
 }
 

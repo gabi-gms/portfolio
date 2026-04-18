@@ -1,23 +1,21 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { Sun, Moon } from 'lucide-react'
-import { useTheme } from '../contexts/ThemeContext.jsx'
+import { useState, useEffect, useMemo } from 'react'
 import { useLanguage } from '../contexts/LanguageContext.jsx'
 import profileImage from '../assets/profile-cosmic.png'
 
 
 export function Hero() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const { isDark, toggleTheme } = useTheme()
   const { language, toggleLanguage, t } = useLanguage()
 
-  const nav = [
+  // Cache navigation items to avoid redundant translation calls
+  const nav = useMemo(() => [
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.projects'), href: '#projects' },
     { label: t('nav.experience'), href: '#experience' },
     { label: t('nav.stacks'), href: '#technologies' },
     { label: t('nav.contact'), href: '#contact' },
-  ]
+  ], [language, t])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +30,7 @@ export function Hero() {
     <section className="relative">
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/[0.08] backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.2)]' 
+          ? 'bg-white/[0.08] backdrop-blur-xl border-b border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.2)]' 
           : 'bg-transparent'
       }`}>
         <div className="mx-auto w-full max-w-6xl px-6 py-4">
@@ -65,27 +63,6 @@ export function Hero() {
                 aria-label="Toggle language"
               >
                 {language === 'en' ? 'PT' : 'EN'}
-              </motion.button>
-              
-              {/* Theme Toggle Button */}
-              <motion.button
-                onClick={toggleTheme}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="rounded-full p-2 text-slate-300 transition-colors hover:bg-white/10 hover:text-slate-100"
-                aria-label="Toggle theme"
-              >
-                <motion.div
-                  initial={false}
-                  animate={{ rotate: isDark ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                >
-                  {isDark ? (
-                    <Sun className="h-4 w-4" />
-                  ) : (
-                    <Moon className="h-4 w-4" />
-                  )}
-                </motion.div>
               </motion.button>
             </nav>
           </div>

@@ -60,12 +60,19 @@
       }
     },
     "approach": {
-      "title": "Minha Abordagem",
-      "code": {
-        "status": "system.status",
+      "about": {
+        "filename": "sobre.ts",
+        "line1": "system.status",
         "focus": "focus: \"interfaces\"",
         "style": "style: \"minimal + cosmic\"",
         "approach": "approach: \"precision\""
+      },
+      "profile": {
+        "filename": "perfil.ts",
+        "name": "\"Gabriella Gomes\"",
+        "role": "\"Desenvolvedora Full Stack\"",
+        "focus": "\"Experiências Web Premium\"",
+        "approach": "\"Minimal + Funcional\""
       }
     }
   },

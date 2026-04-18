@@ -64,6 +64,13 @@
         "focus": "focus: \"interfaces\"",
         "style": "style: \"minimal + cosmic\"",
         "approach": "approach: \"precision\""
+      },
+      "profile": {
+        "filename": "profile.ts",
+        "name": "\"Gabriella Gomes\"",
+        "role": "\"Full Stack Developer\"",
+        "focus": "\"Premium Web Experiences\"",
+        "approach": "\"Minimal + Functional\""
       }
     }
   },

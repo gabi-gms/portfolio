@@ -9,34 +9,6 @@ import profileImage from '../assets/profile-cosmic.png'
 export function About() {
   const { t } = useLanguage()
 
-  // Cache concepts array to avoid redundant translation calls
-  const concepts = useMemo(() => [
-    {
-      icon: Code,
-      title: t('about.concepts.clarity.title'),
-      subtitle: t('about.concepts.clarity.subtitle'),
-      points: t('about.concepts.clarity.points')
-    },
-    {
-      icon: Zap,
-      title: t('about.concepts.motion.title'),
-      subtitle: t('about.concepts.motion.subtitle'),
-      points: t('about.concepts.motion.points')
-    },
-    {
-      icon: Layers,
-      title: t('about.concepts.systems.title'),
-      subtitle: t('about.concepts.systems.subtitle'),
-      points: t('about.concepts.systems.points')
-    },
-    {
-      icon: Gauge,
-      title: t('about.concepts.performance.title'),
-      subtitle: t('about.concepts.performance.subtitle'),
-      points: t('about.concepts.performance.points')
-    }
-  ], [t])
-
   return (
     <Section
       id="about"
@@ -67,7 +39,7 @@ export function About() {
               <div className="h-3 w-3 rounded-full bg-yellow-500/80"></div>
               <div className="h-3 w-3 rounded-full bg-green-500/80"></div>
             </div>
-            <div className="text-xs font-mono text-slate-500">profile.ts</div>
+            <div className="text-xs font-mono text-slate-500">{t('about.approach.filename')}</div>
           </div>
           
           {/* Code content */}
@@ -82,25 +54,25 @@ export function About() {
               <div>
                 <span className="text-indigo-400">name</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> "Gabriella Gomes"</span>
+                <span className="text-slate-200"> {t('about.approach.profile.name')}</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">role</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> "Full Stack Developer"</span>
+                <span className="text-slate-200"> {t('about.approach.profile.role')}</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">focus</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> "Premium Web Experiences"</span>
+                <span className="text-slate-200"> {t('about.approach.profile.focus')}</span>
                 <span className="text-slate-400">,</span>
               </div>
               <div>
                 <span className="text-indigo-400">approach</span>
                 <span className="text-slate-400">:</span>
-                <span className="text-slate-200"> "Minimal + Functional"</span>
+                <span className="text-slate-200"> {t('about.approach.profile.approach')}</span>
               </div>
             </div>
             <div className="text-slate-200">{'}'}</div>

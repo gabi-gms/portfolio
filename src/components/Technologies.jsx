@@ -54,21 +54,21 @@ function TechParticles({ count = 32 }) {
 }
 
 
-const filters = ['All', 'Frontend', 'Backend', 'Tools', 'Database']
+const filters = ['All', 'Frontend', 'Backend', 'Tools', 'Database', 'IA', 'DevOps']
 
 const tech = [
   // Frontend
-  { name: 'Angular', category: 'Frontend', level: 'Intermediate', value: 70 },
+  { name: 'Angular', category: 'Frontend', level: 'Advanced', value: 80 },
   { name: 'JavaScript', category: 'Frontend', level: 'Advanced', value: 85 },
-  { name: 'TypeScript', category: 'Frontend', level: 'Intermediate', value: 72 },
-  { name: 'Tailwind', category: 'Frontend', level: 'Advanced', value: 86 },
-  { name: 'HTML', category: 'Frontend', level: 'Advanced', value: 84 },
+  { name: 'TypeScript', category: 'Frontend', level: 'Intermediate', value: 68 },
+  { name: 'Tailwind', category: 'Frontend', level: 'Intermediate', value: 60 },
+  { name: 'HTML', category: 'Frontend', level: 'Advanced', value: 89 },
   { name: 'CSS', category: 'Frontend', level: 'Advanced', value: 82 },
-  { name: 'React', category: 'Frontend', level: 'Advanced', value: 88 },
+  { name: 'React', category: 'Frontend', level: 'Intermediate', value: 65 },
 
   // Backend
   { name: 'Node.js', category: 'Backend', level: 'Intermediate', value: 68 },
-  { name: 'Express', category: 'Backend', level: 'Intermediate', value: 62 },
+  { name: 'Express', category: 'Backend', level: 'Intermediate', value: 50 },
   { name: 'REST APIs', category: 'Backend', level: 'Intermediate', value: 66 },
 
   // Tools
@@ -80,6 +80,15 @@ const tech = [
   // Database
   { name: 'MySQL', category: 'Database', level: 'Intermediate', value: 65 },
   { name: 'PostgreSQL', category: 'Database', level: 'Intermediate', value: 60 },
+  
+  // IA
+  { name: 'LLM', category: 'IA', level: 'Beginner', value: 60 },
+  { name: 'Prompt Engineering', category: 'IA', level: 'Intermediate', value: 60 },
+  
+  // DevOps
+  { name: 'SCRUM', category: 'DevOps', level: 'Intermediate', value: 60 },
+  { name: 'Kanban', category: 'DevOps', level: 'Intermediate', value: 60 },
+  { name: 'Management', category: 'DevOps', level: 'Intermediate', value: 60 },
 ]
 
 function FilterButton({ active, children, onClick }) {

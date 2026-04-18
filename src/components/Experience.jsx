@@ -4,28 +4,52 @@ import { Timer } from 'lucide-react'
 
 const items = [
   {
-    role: 'Front-End Developer',
+    role: 'Fullstack Developer',
     company: 'Freelance / Personal Projects',
-    period: '2024 — Present',
-    tags: ['React', 'Tailwind CSS', 'TypeScript'],
+    period: 'Jan 2026 — Present',
+    tags: ['Python', 'Tailwind CSS', 'TypeScript', 'Next.js', 'LLM', 'Prompt Engineering'],
     description:
       'Designing and building modern UIs with React and Tailwind, focusing on clean layouts, accessibility, and subtle motion.',
   },
   {
-    role: 'UI Engineer',
-    company: 'Product Prototype',
-    period: '2023 — 2024',
-    tags: ['Component Libraries', 'UI/UX', 'Performance'],
+    role: 'Visiting Extension Researcher',
+    company: 'UFRGS | UC3M',
+    period: 'May 2025 — Nov 2025',
+    tags: ['Python', 'RISC-V', 'C', "Computer Vision", 'Management'],
     description:
-      'Created component libraries and polished interactions, improving consistency and speeding up feature delivery.',
+      `Developed data processing pipelines and automation flows in Python for Computer Vision projects, aligning with machine learning technology preferences.
+       Implemented low-level algorithms in C and analyzed RISC-V instructions, focusing on computational efficiency and large-scale system architecture.
+       Designed modular systems integrating hardware logic with control interfaces, applying Agile methodologies (Scrum/Kanban) for complex delivery management.`,
   },
   {
-    role: 'Web Developer',
-    company: 'Learning & Labs',
-    period: '2022 — 2023',
-    tags: ['Responsive Design', 'Performance', 'Animation'],
+    role: 'Frontend Software Engineer',
+    company: 'Izio&Co',
+    period: 'Jan 2023 — Aug 2023',
+    tags: ['Responsive Design', 'Angular', 'TypeScript', 'Angular Material', 'SCRUM'],
     description:
-      'Built responsive websites and experimented with performance, animations, and design systems.',
+      `Led the architecture of scalable web applications using Angular and TypeScript, ensuring high availability and performance for "massive scale" environments.
+       Orchestrated real-time data flow processing via REST APIs, maintaining data integrity for critical operations.
+       Reduced technical debt and increased ecosystem stability through rigorous code refactoring and clean code practices.`,
+  },
+  {
+    role: 'Frontend Software Engineer',
+    company: 'Smartscan',
+    period: 'May 2022 — Dec 2022',
+    tags: ['Responsive Design', 'Angular', 'Bootstrap'],
+    description:
+      `Architected and scaled administrative interfaces for logistics management using Angular, TypeScript, and Bootstrap, focusing on high-volume data visualization.
+       Ensured robust integration with backend services via REST APIs, maintaining data integrity and continuous flow for critical operations.
+       Applied Git versioning best practices, optimizing technical workflows.`,
+  },
+  {
+    role: 'Junior Software Developer | IT Intern',
+    company: 'Sigpharma',
+    period: 'Feb 2020 — Feb 2021',
+    tags: ['Angular', 'Node.js', 'MySQL', 'Technical Documentation', 'Angular Material', 'Kanban'],
+    description:
+      `Strategically acted in the migration of legacy architectures to modern stacks based on Angular. 
+      Maintained APIs and integrated databases using Node.js and MySQL. 
+      Developed technical documentation for system architecture and workflows, facilitating team organization and onboarding.`,
   },
 ]
 
@@ -49,10 +73,10 @@ function TimelineItem({ item }) {
           <div className="text-base font-semibold tracking-tight text-slate-50">
             {item.role}
           </div>
-          <div className="mt-1 text-sm text-slate-500">{item.company}</div>
+          <div className="mt-1 text-sm text-slate-500">{item.period}</div>
         </div>
         <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-[0.22em] text-slate-400">
-          {item.period}
+          {item.company}
         </div>
       </div>
 

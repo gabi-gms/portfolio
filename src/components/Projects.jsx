@@ -11,25 +11,6 @@ function ProjectCard({ project }) {
       transition={{ duration: 0.45, ease: [0.21, 0.65, 0.21, 0.98] }}
       className="group relative block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_24px_80px_rgba(0,0,0,0.65)] backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
     >
-      {/* Image Section */}
-      <div className="relative h-36 overflow-hidden">
-        <motion.img
-          src={project.image}
-          alt={project.title}
-          className="h-full w-full object-cover"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        />
-        
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        
-        {/* Hover Glow Effect */}
-        <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-          <div className="absolute inset-0 bg-[radial-gradient(700px_circle_at_20%_15%,rgba(99,102,241,0.14),transparent_60%),radial-gradient(700px_circle_at_75%_30%,rgba(56,189,248,0.10),transparent_58%)]" />
-        </div>
-      </div>
-
       {/* Content Section */}
       <div className="relative p-6">
         <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 ring-1 ring-white/10 transition duration-500 group-hover:opacity-100" />
@@ -86,7 +67,6 @@ export function Projects() {
       description: t('projects.nebulanotes.description'),
       tags: t('projects.nebulanotes.tags'),
       href: '#',
-      image: 'https://images.unsplash.com/photo-1620712943543-26fc9962c452?w=800&h=600&fit=crop&auto=format',
       featured: t('projects.featured'),
     },
     {
@@ -94,7 +74,6 @@ export function Projects() {
       description: t('projects.orbitdashboard.description'),
       tags: t('projects.orbitdashboard.tags'),
       href: '#',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format',
       featured: t('projects.featured'),
     },
     {
@@ -102,7 +81,6 @@ export function Projects() {
       description: t('projects.stellarshop.description'),
       tags: t('projects.stellarshop.tags'),
       href: '#',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format',
       featured: t('projects.featured'),
     },
     {
@@ -110,7 +88,6 @@ export function Projects() {
       description: t('projects.stellarshop.description'),
       tags: t('projects.stellarshop.tags'),
       href: '#',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format',
       featured: t('projects.featured'),
     },
   ]

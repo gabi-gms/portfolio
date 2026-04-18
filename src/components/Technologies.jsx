@@ -88,7 +88,7 @@ const tech = [
   // DevOps
   { name: 'SCRUM', category: 'DevOps', level: 'Intermediate', value: 60 },
   { name: 'Kanban', category: 'DevOps', level: 'Intermediate', value: 60 },
-  { name: 'Management', category: 'DevOps', level: 'Intermediate', value: 60 },
+  { name: 'Project Management', category: 'DevOps', level: 'Intermediate', value: 60 },
 ]
 
 function FilterButton({ active, children, onClick }) {

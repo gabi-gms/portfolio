@@ -60,30 +60,9 @@ function ProjectCard({ project }) {
 export function Projects() {
   const projects = [
     {
-      title: 'Nebula Notes',
-      description: 'A clean notes app with fast search, markdown support, and offline-first storage.',
-      tags: ['React', 'Local storage', 'UI'],
-      href: '#',
-      featured: 'Featured',
-    },
-    {
-      title: 'Orbit Dashboard',
-      description: 'A minimal analytics dashboard with responsive charts and accessible components.',
-      tags: ['React', 'Tailwind', 'A11y'],
-      href: '#',
-      featured: 'Featured',
-    },
-    {
-      title: 'Stellar Shop',
-      description: 'A storefront concept with polished product cards, filters, and smooth motion.',
-      tags: ['UI', 'Motion', 'Performance'],
-      href: '#',
-      featured: 'Featured',
-    },
-    {
-      title: 'Stellar Shop',
-      description: 'A storefront concept with polished product cards, filters, and smooth motion.',
-      tags: ['UI', 'Motion', 'Performance'],
+      title: 'Revende+',
+      description: 'A platform for resellers to manage their products and sales.',
+      tags: ['Next.js', 'Node.js', 'TypeScript', 'Tailwind'],
       href: '#',
       featured: 'Featured',
     },
